@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Checklist</title>
+    <link rel="stylesheet" href="estilo.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    
+</head>
+<body onload="carregarTarefas()">
+    <main>
+        <div>
+            <input type="checkbox" class="checkbox" id="chk">
+
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+
+            </label>
+
+
+        </div>
+
+        <header>
+            
+        
+        <h1>Meu Checklist</h1>
+
+       
+            <input type="text" id="nova-tarefa" placeholder="Digite uma nova tarefa..." />
+            
+            <button  id="adicionarTarefa" onclick="adicionarTarefa()"> 
+               Adicionar<i class="fa-solid fa-pencil"></i>
+            </button>
+       </header>
+
+
+ <div class="caixaListas">
+    <div class="bloco">
+        <h2>Tarefas pendentes</h2>
+        <div id="tarefas-pendentes" class="caixaTarefas"></div>
+    </div>
+
+    <div class="bloco">
+        <h2>Tarefas concluídas</h2>
+        <div id="tarefas-resolvidas" class="caixaTarefas"></div>
+    </div>
+</div>
+
+ </main>
+
+
+ 
+    <script src="script.js"></script>
+</body>
+</html>

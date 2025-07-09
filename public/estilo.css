@@ -1,0 +1,187 @@
+:root {
+    --cor-fundo: #11130e;
+    --cor-texto: #11130e;
+    --cor-botao: #d1fab5;
+    --cor-botao-hover: #9cef84;
+    --cor-input: #fcef9c;
+    --cor-caixa: #fcef9c;
+    --cor-postit: #fff8a6;
+    --cor-postit-hover: #fff370;
+    --cor-texto-botao: black;
+    --cor-texto-input: black;
+}
+
+body.dark {
+    --cor-fundo: #fcef9c; 
+    --cor-texto: #fcef9c;
+    --cor-botao: #9cef84;
+    --cor-botao-hover: #d1fab5;
+    --cor-input: #11130e;
+    --cor-caixa: #11130e;
+    --cor-postit:#11130e;
+    --cor-postit-hover:#1a1d17;
+    --cor-texto-input: #fcef9c ;
+    --cor-tarefas-concluidas: #fcef9c;
+
+}
+
+body{
+    background-color: #11130e;
+    color: #fcef9c;
+    font-family: cursive;
+}
+
+body.dark{
+    background-color:#fcef9c;
+    color: #11130e;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+
+.label{
+    background-color: var(--cor-caixa);
+    width: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4px;
+    position: relative;
+    height: 26px;
+   
+
+}
+
+.label .ball{
+    background-color: var(--cor-texto);
+    border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+
+
+}
+
+.checkbox:checked + .label .ball{
+    transform: translateX(32px);
+}
+
+.fa-moon{
+    color: #f1c40f;
+}
+
+.fa-sun{
+    color: #f39c12;
+}
+
+main{
+    text-align: center;
+    
+}
+
+header h1{
+    font-size: 2.9em;
+}
+#adicionarTarefa{
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-botao);
+    width: 100px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: cursive;
+    border-style: none;
+    
+
+}
+
+#adicionarTarefa:active{
+     transform: scale(0.97) translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+}
+
+#adicionarTarefa:hover{
+    background-color:var(--cor-botao-hover);
+}
+
+input{
+height: 50px;
+border-radius: 10px;
+background-color: var(--cor-input);
+font-family: cursive;
+border: none;
+outline: none;
+color: var(--cor-texto-input);
+}
+
+.caixaListas {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.bloco {
+    text-align: center;
+}
+
+.caixaTarefas {
+    background-color: var(--cor-caixa);
+    width: 250px;
+    min-height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+   
+    margin-top: 10px;
+}
+
+.caixaTarefas p {
+    background-color: var(--cor-postit);
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    font-family: cursive;
+    max-width: 200px;
+    text-align: left;
+    position: relative;
+    transition: transform 0.1s;
+    cursor: pointer;
+    transform: rotate(-1deg);
+    color: var(--cor-texto);
+    
+    
+}
+
+.caixaTarefas p:hover {
+    transform: scale(1.03) rotate(1deg);
+    background-color: var(--cor-postit-hover);
+}
+
+.btn-editar {
+    color: #555;
+    font-size: 14px;
+}
+
+.btn-editar:hover {
+    color: #007bff;
+}
+
+.btn-excluir{
+    color: #555;
+    font-size: 14px;
+}
+
+.btn-excluir:hover{
+    color: red;
+}
